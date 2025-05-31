@@ -1,0 +1,109 @@
+@import "@/styles/variables";
+
+.card {
+  background: rgba($apple-white, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: $apple-border-radius-lg;
+  padding: $apple-space-6;
+  box-shadow: $apple-shadow-md;
+  border: 1px solid $apple-border-light;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: $apple-text-3xl;
+  color: $apple-text-primary;
+  margin-bottom: $apple-space-6;
+  text-align: center;
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: $apple-space-5;
+}
+
+.project {
+  padding: $apple-space-4;
+  background: rgba($apple-white, 0.9);
+  border-radius: $apple-border-radius-md;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $apple-space-3;
+}
+
+.projectName {
+  font-size: $apple-text-xl;
+  color: $apple-text-primary;
+  margin: 0;
+}
+
+.projectLink {
+  color: $apple-blue;
+  font-size: $apple-text-sm;
+  text-decoration: none;
+  padding: $apple-space-2 $apple-space-3;
+  border-radius: $apple-border-radius-sm;
+  transition: all $apple-transition-fast ease;
+
+  &:hover {
+    background: rgba($apple-blue, 0.1);
+    text-decoration: underline;
+  }
+}
+
+.projectDescription {
+  color: $apple-text-secondary;
+  font-size: $apple-text-base;
+  line-height: 1.5;
+  margin-bottom: $apple-space-3;
+}
+
+.technologies {
+  margin-top: $apple-space-4;
+}
+
+.techHeading {
+  font-size: $apple-text-sm;
+  color: $apple-text-tertiary;
+  margin-bottom: $apple-space-2;
+  font-weight: 500;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $apple-space-2;
+}
+
+.techItem {
+  background: rgba($apple-blue, 0.1);
+  color: $apple-blue;
+  padding: $apple-space-2 $apple-space-3;
+  border-radius: $apple-border-radius-full;
+  font-size: $apple-text-xs;
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background: rgba($apple-border-light, 0.5);
+  margin-top: $apple-space-4;
+}
+
+@media (max-width: $apple-bp-tablet) {
+  .projectHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $apple-space-2;
+  }
+
+  .projectLink {
+    align-self: flex-start;
+  }
+}

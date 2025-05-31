@@ -1,0 +1,234 @@
+@import "@/styles/variables";
+
+// Top Bar Container
+.header {
+  background-color: rgba($apple-black, 0.8);
+  backdrop-filter: blur(10px);
+  color: $apple-white;
+  padding: 0 $apple-space-5;
+  position: sticky;
+  top: 0;
+  z-index: $apple-z-navigation;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba($apple-white, 0.1);
+  -webkit-app-region: drag; // For electron apps
+}
+
+// Apple Logo
+.appleLogo {
+  width: 16px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+
+  svg {
+    width: 100%;
+    height: 20px;
+    fill: $apple-white;
+  }
+}
+
+// Navigation Menu
+.nav {
+  height: 100%;
+  margin-left: $apple-space-6;
+
+  &List {
+    display: flex;
+    height: 100%;
+    list-style: none;
+  }
+
+  &Item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 $apple-space-4;
+    font-size: $apple-text-sm;
+    font-weight: 400;
+    color: rgba($apple-white, 0.8);
+    cursor: default;
+    transition: color $apple-transition-fast $apple-ease-in-out;
+    -webkit-app-region: no-drag;
+
+    &:hover {
+      color: $apple-white;
+    }
+
+    &.active {
+      color: $apple-white;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background: $apple-blue;
+      }
+    }
+  }
+}
+
+// Dropdown Menus
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba($apple-dark-gray, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: $apple-border-radius-md;
+  padding: $apple-space-3 0;
+  min-width: 200px;
+  box-shadow: $apple-shadow-lg;
+  color: $apple-text-on-dark;
+  z-index: $apple-z-modal;
+  overflow: hidden;
+
+  &Item {
+    padding: $apple-space-2 $apple-space-4;
+    font-size: $apple-text-sm;
+    transition: background-color $apple-transition-fast ease;
+
+    &:hover {
+      background-color: rgba($apple-blue, 0.2);
+    }
+  }
+
+  &Divider {
+    height: 1px;
+    background: rgba($apple-white, 0.1);
+    margin: $apple-space-2 0;
+  }
+}
+
+// Right-side Controls
+.controls {
+  display: flex;
+  align-items: center;
+  gap: $apple-space-3;
+  -webkit-app-region: no-drag;
+}
+
+.controlButton {
+  background: transparent;
+  border: none;
+  padding: $apple-space-2;
+  cursor: pointer;
+  color: $apple-text-on-dark-secondary;
+  transition: all $apple-transition-fast $apple-ease-in-out;
+  border-radius: $apple-border-radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $apple-white;
+    background: rgba($apple-white, 0.1);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Profile Circle
+.profileCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: $apple-border-radius-full;
+  background-color: $apple-blue;
+  color: $apple-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $apple-text-xs;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform $apple-transition-fast ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// System Controls (for electron apps)
+.systemControls {
+  display: flex;
+  gap: $apple-space-2;
+  margin-left: $apple-space-4;
+}
+
+.systemControl {
+  width: 12px;
+  height: 12px;
+  border-radius: $apple-border-radius-full;
+  border: none;
+  cursor: pointer;
+
+  &Close {
+    background-color: #ff5f56;
+
+    &:hover {
+      background-color: darken(#ff5f56, 10%);
+    }
+  }
+
+  &Minimize {
+    background-color: #ffbd2e;
+
+    &:hover {
+      background-color: darken(#ffbd2e, 10%);
+    }
+  }
+
+  &Maximize {
+    background-color: #27c93f;
+
+    &:hover {
+      background-color: darken(#27c93f, 10%);
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: $apple-bp-tablet) {
+  .header {
+    height: 48px;
+    padding: 0 $apple-space-3;
+  }
+
+  .nav {
+    margin-left: $apple-space-3;
+
+    &Item {
+      padding: 0 $apple-space-2;
+      font-size: $apple-text-xs;
+    }
+  }
+
+  .controls {
+    gap: $apple-space-2;
+  }
+}
+
+@media (max-width: $apple-bp-mobile) {
+  .nav {
+    display: none;
+  }
+
+  .header {
+    justify-content: flex-start;
+  }
+}

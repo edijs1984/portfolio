@@ -1,0 +1,104 @@
+// ========== Colors ==========
+// Primary colors
+$apple-black: #000000;
+$apple-white: #ffffff;
+$apple-dark-gray: #1d1d1f;
+$apple-light-gray: #f5f5f7;
+
+// Accent colors (blue is Apple's primary accent)
+$apple-blue: #0071e3;
+$apple-blue-dark: #0067c9;
+$apple-blue-light: #2997ff;
+
+// Product colors (from Apple products)
+$apple-silver: #f2f2f2;
+$apple-space-gray: #535353;
+$apple-gold: #f5e5cd;
+$apple-graphite: #4c4c4c;
+$apple-pink: #ffd1dc;
+$apple-green: #d1f7d3;
+$apple-sky-blue: #c7ebfa;
+
+// Text colors
+$apple-text-primary: #1d1d1f;
+$apple-text-secondary: #86868b;
+$apple-text-tertiary: #a1a1a6;
+$apple-text-on-dark: rgba(255, 255, 255, 0.92);
+$apple-text-on-dark-secondary: rgba(255, 255, 255, 0.6);
+
+// UI colors
+$apple-border-light: #d2d2d7;
+$apple-border-dark: #424245;
+$apple-backdrop: rgba(0, 0, 0, 0.5);
+
+// ========== Typography ==========
+$apple-font-sf-pro: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+  "SF Pro Text", "Helvetica Neue", sans-serif;
+
+$apple-text-xs: 12px;
+$apple-text-sm: 14px;
+$apple-text-base: 17px; // Apple's standard body size
+$apple-text-lg: 21px;
+$apple-text-xl: 24px;
+$apple-text-2xl: 28px;
+$apple-text-3xl: 32px;
+$apple-text-4xl: 40px;
+$apple-text-5xl: 48px;
+$apple-text-6xl: 64px; // Used for hero sections
+
+$apple-line-height-tight: 1.1;
+$apple-line-height-normal: 1.235; // Apple's preferred ratio
+$apple-line-height-loose: 1.5;
+
+// ========== Spacing ==========
+$apple-space-1: 4px;
+$apple-space-2: 8px;
+$apple-space-3: 12px;
+$apple-space-4: 16px;
+$apple-space-5: 24px;
+$apple-space-6: 32px;
+$apple-space-7: 48px;
+$apple-space-8: 64px;
+$apple-space-9: 80px;
+$apple-space-10: 96px;
+
+// ========== Breakpoints ==========
+$apple-bp-mobile: 0px;
+$apple-bp-tablet: 734px; // Apple's first breakpoint
+$apple-bp-small-desktop: 1000px;
+$apple-bp-large-desktop: 1440px;
+
+// ========== Animations ==========
+$apple-transition-fast: 0.2s;
+$apple-transition-medium: 0.4s; // Apple's standard transition
+$apple-transition-slow: 0.6s;
+$apple-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); // Apple's signature easing
+
+// ========== Shadows ==========
+$apple-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$apple-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$apple-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+$apple-shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.1);
+
+// ========== Z-index ==========
+$apple-z-modal: 100;
+$apple-z-navigation: 50;
+$apple-z-content: 10;
+$apple-z-base: 1;
+// ========== Borders ==========
+$apple-border-radius-sm: 4px;
+$apple-border-radius-md: 8px; // Add this line
+$apple-border-radius-lg: 12px;
+$apple-border-radius-full: 999px; // For circular elements
+$apple-border-width: 1px;
+$apple-border-color: rgba($apple-white, 0.1);
+// Borders
+$apple-border-radius-sm: 4px;
+$apple-border-radius-md: 8px;
+$apple-border-radius-lg: 12px;
+$apple-border-radius-full: 999px;
+$apple-border-light: rgba(0, 0, 0, 0.1);
+
+// Shadows
+$apple-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$apple-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);

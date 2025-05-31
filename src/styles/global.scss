@@ -1,0 +1,231 @@
+// global.scss
+@import "variables";
+
+/* ========== BASE RESETS ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $apple-font-sf-pro;
+  font-size: $apple-text-base;
+  line-height: $apple-line-height-normal;
+  color: $apple-text-primary;
+  background-color: $apple-white;
+  overflow-x: hidden;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: $apple-line-height-tight;
+  margin-bottom: $apple-space-4;
+}
+
+h1 {
+  font-size: $apple-text-4xl;
+}
+h2 {
+  font-size: $apple-text-3xl;
+}
+h3 {
+  font-size: $apple-text-2xl;
+}
+h4 {
+  font-size: $apple-text-xl;
+}
+h5 {
+  font-size: $apple-text-lg;
+}
+h6 {
+  font-size: $apple-text-base;
+}
+
+p {
+  margin-bottom: $apple-space-4;
+  color: $apple-text-secondary;
+}
+
+a {
+  color: $apple-blue;
+  text-decoration: none;
+  transition: color $apple-transition-fast $apple-ease-in-out;
+
+  &:hover {
+    color: $apple-blue-dark;
+    text-decoration: underline;
+  }
+}
+
+/* ========== LAYOUT COMPONENTS ========== */
+.header {
+  background-color: $apple-black;
+  color: $apple-white;
+  padding: $apple-space-5 $apple-space-6;
+  position: sticky;
+  top: 0;
+  z-index: $apple-z-navigation;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: $apple-space-6;
+    list-style: none;
+  }
+
+  &__link {
+    color: $apple-text-on-dark;
+    font-size: $apple-text-sm;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+
+    &:hover {
+      color: $apple-white;
+      text-decoration: none;
+    }
+  }
+}
+
+.main {
+  padding: $apple-space-7 0;
+  min-height: 80vh;
+}
+
+.container {
+  width: 100%;
+  max-width: $apple-bp-large-desktop;
+  margin: 0 auto;
+  padding: 0 $apple-space-5;
+}
+
+.footer {
+  background-color: $apple-light-gray;
+  padding: $apple-space-8 0;
+  color: $apple-text-secondary;
+  font-size: $apple-text-sm;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-block;
+  padding: $apple-space-3 $apple-space-5;
+  border-radius: 980px;
+  font-size: $apple-text-sm;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all $apple-transition-medium $apple-ease-in-out;
+  border: none;
+
+  &--primary {
+    background-color: $apple-blue;
+    color: $apple-white;
+
+    &:hover {
+      background-color: $apple-blue-dark;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $apple-blue;
+    border: 1px solid $apple-blue;
+
+    &:hover {
+      background-color: rgba($apple-blue, 0.1);
+    }
+  }
+}
+
+/* ========== UTILITY CLASSES ========== */
+.text-center {
+  text-align: center;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-light {
+  color: $apple-text-secondary;
+}
+.text-on-dark {
+  color: $apple-text-on-dark;
+}
+
+.mt-1 {
+  margin-top: $apple-space-1;
+}
+.mt-2 {
+  margin-top: $apple-space-2;
+}
+/* ... continue with other spacing utilities ... */
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: $apple-bp-tablet) {
+  .header {
+    padding: $apple-space-4;
+  }
+
+  .nav {
+    &__list {
+      gap: $apple-space-4;
+    }
+  }
+
+  h1 {
+    font-size: $apple-text-3xl;
+  }
+  h2 {
+    font-size: $apple-text-2xl;
+  }
+}
+
+@media (max-width: $apple-bp-mobile) {
+  .nav {
+    display: none; /* Typical mobile menu pattern */
+  }
+
+  /* Add mobile menu styles here */
+}
+.card-container {
+  position: relative;
+  min-height: 400px; // Adjust based on your content
+}
+
+.card-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.card-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all $apple-transition-medium $apple-ease-in-out;
+}
+.card-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all $apple-transition-medium $apple-ease-in-out;
+}
