@@ -50,6 +50,14 @@ export const TechnologiesCard = () => {
               <li>Bitcoin (BitcoinJS - P2WPKH, P2WSH multisig)</li>
             </ul>
           </div>
+          <div className={styles.category}>
+            <h4>Blockchain:</h4>
+            <ul>
+              <li>Solana (Squads SDK for multisig)</li>
+              <li>Ethereum & EVM chains (Viem, Safe/Gnosis Safe)</li>
+              <li>Bitcoin (BitcoinJS - P2WPKH, P2WSH multisig)</li>
+            </ul>
+          </div>
           {/* Add other backend categories similarly */}
         </div>
 

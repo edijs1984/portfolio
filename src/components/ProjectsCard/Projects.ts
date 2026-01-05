@@ -14,7 +14,7 @@ export const projectsData: PortfolioData = {
   // ... other default data ...
   projects: [
     {
-      name: "AirSig - Multi-Chain Crypto Wallet",
+      name: "Multi-Chain Crypto Wallet",
       description:
         "A next-generation multi-chain cryptocurrency wallet with team collaboration features. Supports Ethereum, BSC, Polygon, Avalanche, and Bitcoin. Features include individual wallet management, offline signer mode, and enterprise team multisig capabilities with push notifications. Built with hardware-encrypted storage and biometric authentication.",
       technologies: [
