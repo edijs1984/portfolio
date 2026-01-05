@@ -14,6 +14,22 @@ export const projectsData: PortfolioData = {
   // ... other default data ...
   projects: [
     {
+      name: "AirSig - Multi-Chain Crypto Wallet",
+      description:
+        "A next-generation multi-chain cryptocurrency wallet with team collaboration features. Supports Ethereum, BSC, Polygon, Avalanche, and Bitcoin. Features include individual wallet management, offline signer mode, and enterprise team multisig capabilities with push notifications. Built with hardware-encrypted storage and biometric authentication.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "NestJS",
+        "MongoDB",
+        "Viem",
+        "BitcoinJS",
+        "Safe (Gnosis Safe)",
+        "Push Notifications",
+      ],
+    },
+    {
       name: "Portfolio Website",
       description:
         "A modern portfolio built with React, TypeScript, and Vite showcasing my work and skills. Features a clean UI with smooth transitions and responsive design.",
@@ -59,7 +75,7 @@ export const projectsData: PortfolioData = {
     {
       name: "Crypto Custody Platform",
       description:
-        "A crypto custody platform with support for hot and cold wallets, multi-signature, on-chain and off-chain transactions, and an integrated exchange.",
+        "An enterprise-grade crypto custody platform with support for hot and cold wallets, Solana multisig (Squads SDK), Bitcoin multisig (P2WSH), and Ethereum multisig. Features include on-chain staking, transaction management with multiple approvers, and integrated exchange functionality. Built with microservices architecture and message queuing for reliability.",
       technologies: [
         "NestJS",
         "PostgreSQL",
@@ -71,6 +87,9 @@ export const projectsData: PortfolioData = {
         "Kafka",
         "RabbitMQ",
         "Microservices",
+        "Solana",
+        "Squads SDK",
+        "Web3",
       ],
     },
     {

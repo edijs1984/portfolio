@@ -8,8 +8,8 @@ export const BasicInfoCard = () => {
           <div className={styles.avatar}>
             <div className={styles.avatarPlaceholder}>
               <img
-                src="profile_photo.jpeg"
-                alt="Your Name"
+                src="/profile_photo.jpeg"
+                alt="Edijs Ziedins"
                 className={styles.avatarImage}
               />
             </div>
@@ -34,7 +34,7 @@ export const BasicInfoCard = () => {
           </div>
           <div className={styles.detailItem}>
             <span className={styles.detailLabel}>Programming since:</span>
-            <span>May 2019 ({new Date().getFullYear() - 2019} years)</span>
+            <span>May 2019 (7 years)</span>
           </div>
           <div className={styles.detailItem}>
             <span className={styles.detailLabel}>Location:</span>
@@ -54,7 +54,7 @@ export const BasicInfoCard = () => {
           <div className={styles.detailItem}>
             <span className={styles.detailLabel}>About me:</span>
             <span>
-              I’m a curious and adaptable full-stack developer with 5+ years of
+              I'm a curious and adaptable full-stack developer with 7 years of
               experience. I’m very honest, direct, and loyal—someone who values
               trust and clear communication. I enjoy solving real problems with
               simple, effective solutions and take full ownership of my work.
